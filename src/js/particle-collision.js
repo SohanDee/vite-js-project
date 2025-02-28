@@ -93,3 +93,7 @@ addEventListener('touchmove', (e) => {
         cursorElm.style.opacity = 0;
     }, 5000);
 });
+
+addEventListener('touchend', () => {
+    cursorElm.style.opacity = '0';
+})
