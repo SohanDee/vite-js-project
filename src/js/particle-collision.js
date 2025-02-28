@@ -87,6 +87,7 @@ addEventListener('mouseout', () => {
 addEventListener('touchmove', (e) => {
     if (tmrId) clearTimeout(tmrId);
     cursorElm.style.opacity = '1';
+    console.log(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
     cursorElm.style.left = `${e.changedTouches[0].clientX - cursorElm.offsetWidth / 2}px`;
     cursorElm.style.top = `${e.changedTouches[0].clientY - cursorElm.offsetHeight / 2}px`;
     tmrId = setTimeout(()=>{
